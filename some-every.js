@@ -48,7 +48,11 @@ Examples:
     hasNoDuplicates([1,2,3]) // true
 */
 
-function hasNoDuplicates(arr) {}
+function hasNoDuplicates(arr) {
+    return arr.every(function(val){
+        return arr.indexOf(val) === arr.lastIndexOf(val);
+      });
+}
 
 /*
 Write a function called hasCertainKey which accepts an array of objects and a key, and returns true if every single object in the array contains that key. Otherwise it should return false.
